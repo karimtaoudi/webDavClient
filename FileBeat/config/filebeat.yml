@@ -1,0 +1,12 @@
+fields_under_root: true
+fields:
+  instance: ${INSTANCE}
+
+filebeat.inputs:
+- type: log
+  paths:
+    - ${WEBDAV_MOUNT}/*.*
+    - ${WEBDAV_MOUNT}/*/*.*
+
+output.logstash:
+    hosts: ['logstash:5044']

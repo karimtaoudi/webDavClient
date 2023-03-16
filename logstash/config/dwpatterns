@@ -1,0 +1,2 @@
+SFCCDATE %{YEAR}-%{MONTHNUM}-%{MONTHDAY}%{SPACE}%{HOUR}:%{MINUTE}:%{SECOND}(\.[0-9]{3})?
+WTF (\[\]\s*)
