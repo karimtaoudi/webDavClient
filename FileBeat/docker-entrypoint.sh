@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Hello"
+
 # Where are we going to mount the remote webdav resource in our container.
 DEST=${WEBDAV_MOUNT:-/usr/share/filebeat/logs}
 

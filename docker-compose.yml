@@ -66,15 +66,15 @@ services:
       - elk
     depends_on:
       - elasticsearch
-  WebDavFilebeat:
+  webdav-filebeat:
     build:
       context: FileBeat/
       args:
         ELK_VERSION: $ELK_VERSION
     environment:
       WEBDAV_USERNAME: username
-      WEBDAV_PASSWORD: password
-      WEBDAV_URL: https://your-instance/on/demandware.servlet/webdav/Sites/Logs/
+      WEBDAV_PASSWORD: psw
+      WEBDAV_URL: https://<your-instance>.demandware.net/on/demandware.servlet/webdav/Sites/Logs/
       WEBDAV_MOUNT: /usr/share/filebeat/logs
       DAVFS2_ASK_AUTH: 0
       INSTANCE: dev
@@ -90,10 +90,6 @@ networks:
 
 volumes:
   elasticsearch:
-  elk-data:
-  logs:
-    name: logs
-    external: true
       
 
 
